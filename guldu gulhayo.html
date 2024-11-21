@@ -1,0 +1,619 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guliston davlat universiteti - Rasmiy veb-sayti</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #3a0bf7;
+            --secondary-color: #556dba;
+            --accent-color: #89f04d;
+            --text-color: hwb(0 0% 98%);
+            --bg-color: #eeeded;
+            --white: #f4f3f2;
+        }
+.partners {
+    background-color: #535eff;
+    padding: 4rem 0;
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+.partner-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.partner-logo img {
+    max-width: 100%;
+    height: auto;
+    width: 150px;
+    transition: transform 0.3s ease;
+}
+
+.partner-logo img:hover {
+    transform: scale(1.05);
+}
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--white);
+        }
+
+        .logo img {
+            width: 40px;
+            height: 40px;
+            margin-right: 0.5rem;
+        }
+
+        .logo span {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        nav ul {
+            display: flex;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .hero {
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 12rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #e3a008;
+        }
+
+.hero-image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%; /* Kenglikni to'liq qoplaydi */
+    height: 100%; /* Balandlikni to'liq qoplaydi */
+    background-image: url('https://mentalaba.uz/_next/image?url=https%3A%2F%2Fapi.mentalaba.uz%2Ftest_gallery%2Fe88cde6b-1f79-4b88-826d-873af922f431.jpg&w=2048&q=75');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2; /* Rasm aniqroq ko'rinadi */
+    transform: rotate(0deg); /* Burchakni olib tashlaydi */
+}
+
+
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .news-item {
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .news-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .news-content {
+            padding: 1.5rem;
+        }
+
+        .news-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .news-date {
+            color: #6b7280;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+
+        .news-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .features {
+            background-color: var(--white);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 2rem;
+            background-color: #f9fafb;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .feature-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .events-list {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .event-item {
+            display: flex;
+            align-items: flex-start;
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .event-date {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 1rem;
+            text-align: center;
+            min-width: 100px;
+        }
+
+        .event-date-day {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .event-date-month {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+        }
+
+        .event-content {
+            padding: 1.5rem;
+        }
+
+        .event-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            background-color: #1f2937;
+            color: var(--white);
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            list-style-type: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            color: #9ca3af;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #374151;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul {
+                margin-top: 1rem;
+            }
+
+            nav ul li {
+                margin-left: 0;
+                margin-right: 1rem;
+            }
+
+            .hero-content {
+                text-align: center;
+            }
+
+            .hero-image {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">
+                    <img src="https://hemis.guldu.uz/static/crop/3/4/250_250_90_346944150.png" alt="GulDU Logo">
+                    <span>GulDU</span>
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="https://guldu.uz/uz/">Universitet</a></li>
+                        <li><a href="file:///C:/Users/Asus%20Vivobook/Desktop/%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%BF%D0%B0%D0%BF%D0%BA%D0%B0/yoriqnoma.html">Talabalarga yo`riqnoma</a></li>
+                        <li><a href="file:///C:/Users/Asus%20Vivobook/Desktop/%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%BF%D0%B0%D0%BF%D0%BA%D0%B0/kariyera%20markazi.html">Karyera markazi</a></li>
+                        <li><a href="file:///C:/Users/Asus%20Vivobook/Desktop/%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%BF%D0%B0%D0%BF%D0%BA%D0%B0/xorijiy%20talabalat.html">Xalqaro aloqalar(xorijiy talabalr)</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Guliston davlat universitetiga xush kelibsiz</h1>
+                <p>Kelajak liderlari va mutaxassislarini tayyorlaymiz</p>
+		<p>Universitetimiz tarixi</p>
+                <a href="file:///C:/Users/Asus%20Vivobook/Desktop/%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%BF%D0%B0%D0%BF%D0%BA%D0%B0/tariximiz.html" class="cta-button">Batafsil ma'lumot</a>
+            </div>
+        </div>
+        <div class="hero-image"></div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">So'nggi yangiliklar</h2>
+            <div class="news-grid">
+                <div class="news-item">
+                    <img src="https://images.guldu.uz/guldu/2024/10/11/IMG_01.JPG" alt="Yangilik rasmi">
+                    <div class="news-content">
+                        <h3 class="news-title">Guliston Davlat Universiteti rektori M.Xodjiyev Turkiyaning Balikesir Universiteti professorlari bilan muloqot o`tkazdi</h3>
+                        <p class="news-date">2024-11-10</p>
+                        <a href="file:///C:/Users/Asus%20Vivobook/Desktop/%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%BF%D0%B0%D0%BF%D0%BA%D0%B0/yangilik1.html" class="news-link">Batafsil o'qish</a>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img src="https://images.guldu.uz/guldu/2024/10/26/photo_2023-11-16_20-52-40.jpg" alt="Yangilik rasmi">
+                    <div class="news-content">
+                        <h3 class="news-title">Guliston davlat universitetiga 2025-yil uchun Tayanch doktorantura (PhD) va stajyor-tadqiqotchilikka kirish uchun mutaxassislik fanlaridan sinov dasturlari va talabgorlarning bilimini baholash mezonlari</h3>
+                        <p class="news-date">2024-10-26</p>
+                        <a href="file:///C:/Users/Asus%20Vivobook/Desktop/%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%BF%D0%B0%D0%BF%D0%BA%D0%B0/yangilik%202.html" class="news-link">Batafsil o'qish</a>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img src="https://images.guldu.uz/guldu/2024/10/22/photo_2024-10-21_14-39-21.jpg" alt="Yangilik rasmi">
+                    <div class="news-content">
+                        <h3 class="news-title">Qadring baland bo‘lsin-ona tilim!</h3>
+                        <p class="news-date">2024-10-21</p>
+                        <a href="file:///C:/Users/Asus%20Vivobook/Desktop/%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%BF%D0%B0%D0%BF%D0%BA%D0%B0/yangilik%203.html" class="news-link">Batafsil o'qish</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    
+    <section class="section features">
+        <div class="container">
+            <h2 class="section-title">Nima uchun GulDU?</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">??</div>
+                    <h3 class="feature-title">Zamonaviy ta'lim</h3>
+                    <p>Eng so'nggi texnologiyalar va metodikalar asosida o'qitish</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">??</div>
+                    <h3 class="feature-title">Xalqaro hamkorlik</h3>
+                    <p>Dunyoning yetakchi universitetlari bilan almashinuv dasturlari</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">??</div>
+                    <h3 class="feature-title">Ilmiy tadqiqotlar</h3>
+                    <p>Innovatsion loyihalar va ilmiy izlanishlar uchun keng imkoniyatlar</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">??</div>
+                    <h3 class="feature-title">Karyera qo'llab-quvvatlash</h3>
+                    <p>Bitiruvchilarni ish bilan ta'minlash va karyera rivojlantirish xizmatlari</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section partners">
+        <div class="container">
+            <h2 class="section-title">Bizning Hamkorlarimiz</h2>
+            <div class="partners-grid">
+                <div class="partner-item">
+                    <a href="https://www.hgu.tj/ru/page/university.html" target="_blank" class="partner-logo">
+                        <img src="https://www.hgu.tj/images/logohgu.png" alt="Xojand Davlat Universiteti">
+                    </a>
+                </div>
+                <div class="partner-item">
+                    <a href="https://auezov.edu.kz/rus" target="_blank" class="partner-logo">
+                        <img src="https://auezov.edu.kz/images/logo2x-white.svg" alt="M.Auezov nomidagi Janubiy Qozog'iston Davlat Universiteti">
+                    </a>
+                </div>
+                <div class="partner-item">
+                    <a href="https://msu.edu.mk/?lang=en" target="_blank" class="partner-logo">
+                        <img src="https://msu.edu.mk/web/msu2016/wp-content/uploads/MSU-LOGO-2023-ENG-web-RED.png" alt="Xalqaro Slayvan Universiteti">
+                    </a>
+                </div>
+                <div class="partner-item">
+                    <a href="https://www.kangwon.ac.kr/english/index.do" target="_blank" class="partner-logo">
+                        <img src="https://wwwk.kangwon.ac.kr/site/english/images/common/logo.png" alt="Kangvon Milliy Universiteti">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Kelgusi tadbirlar</h2>
+            <div class="events-list">
+                <div class="event-item">
+                    <div class="event-date">
+                        <div class="event-date-day">8</div>
+                        <div class="event-date-month">Dekabr</div>                                                                              
+                    </div>
+                    <div class="event-content">
+                        <h3 class="event-title">O`zbekiston Respublikasi Konstitutsiyasiga bag`ishlangan tadbir</h3>
+                        <p>"Konstitutsiyamiz Faxrimiz" mavzusida</p>
+                        <a href="https://lex.uz/docs/-6445145" class="news-link">Batafsil</a>
+                    </div>
+                </div>
+                <div class="event-item">
+                    <div class="event-date">
+                        <div class="event-date-day">16</div>
+                        <div class="event-date-month">Noyabr</div>
+                    </div>
+                    <div class="event-content">
+                        <h3 class="event-title">Talabalar Kechasi</h3>
+                        <p>Talabalar kuni munosabati bilan</p>
+                        <a href="https://i.ytimg.com/vi/Wq7uk77axnI/sddefault.jpg                                                                                                     " class="news-link">Batafsil</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section student-stats">
+        <div class="container">
+            <h2 class="section-title">Talabalar kontingenti</h2>
+            <div class="student-info">
+                <div class="student-item">
+                    <div class="student-category" style="background-color: #3a0bf7; color: #fff; padding: 1rem; border-radius: 8px; text-align: center;">
+                        <h3 style="font-size: 1.25rem; font-weight: 600;">Jami Talabalar</h3>
+                        <p style="font-size: 1.5rem; font-weight: 700;">14465</p>
+                    </div>
+                </div>
+                <div class="student-item">
+                    <div class="student-category" style="background-color: #556dba; color: #fff; padding: 1rem; border-radius: 8px; text-align: center;">
+                        <h3 style="font-size: 1.25rem; font-weight: 600;">Kunduzgi Ta'lim</h3>
+                        <p style="font-size: 1.5rem; font-weight: 700;">6932</p>
+                    </div>
+                </div>
+                <div class="student-item">
+                    <div class="student-category" style="background-color: #89f04d; color: #fff; padding: 1rem; border-radius: 8px; text-align: center;">
+                        <h3 style="font-size: 1.25rem; font-weight: 600;">Sirtqi Ta'lim</h3>
+                        <p style="font-size: 1.5rem; font-weight: 700;">7202</p>
+                    </div>
+                </div>
+                <div class="student-item">
+                    <div class="student-category" style="background-color: #e3a008; color: #fff; padding: 1rem; border-radius: 8px; text-align: center;">
+                        <h3 style="font-size: 1.25rem; font-weight: 600;">Kechki Ta'lim</h3>
+                        <p style="font-size: 1.5rem; font-weight: 700;">20</p>
+                    </div>
+                </div>
+                <div class="student-item">
+                    <div class="student-category" style="background-color: #ff6f61; color: #fff; padding: 1rem; border-radius: 8px; text-align: center;">
+                        <h3 style="font-size: 1.25rem; font-weight: 600;">Magistratura</h3>
+                        <p style="font-size: 1.5rem; font-weight: 700;">285</p>
+                    </div>
+                </div>
+                <div class="student-item">
+                    <div class="student-category" style="background-color: #a0aec0; color: #fff; padding: 1rem; border-radius: 8px; text-align: center;">
+                        <h3 style="font-size: 1.25rem; font-weight: 600;">Xorijiy Talabalar</h3>
+                        <p style="font-size: 1.5rem; font-weight: 700;">26</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Aloqa ma'lumotlari</h3>
+                    <p>Manzil: 120100, Guliston shahri, 4-mavze</p>
+                    <p>Tel: (0367) 225-40-42</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Foydali havolalar</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://guldu.uz/uz/universitet/unversitet-tashkiliy-tuzilmasi/">Universitet haqida</a></li>
+                        <li><a href="file:///C:/Users/Asus%20Vivobook/Desktop/%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%BF%D0%B0%D0%BF%D0%BA%D0%B0/fakultet.html">Fakultetlar</a></li>
+                        <li><a href="https://guldu.uz/uz/abituriyentlarga/qabul-magistratura/">Magistatura</a></li>
+                        <li><a href="https://guldu.uz/uz/open-data/">ochiq ma`lumotlar</a></li>
+                        <li><a href="https://my.gov.uz" target="_blank">My.gov.uz</a></li>
+        <li><a href="https://student.guldu.uz" target="_blank">Student.guldu.uz</a></li>
+        <li><a href="https://unilibrary.uz" target="_blank">Elektron kutubxona (unilibrary.uz)</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Ijtimoiy tarmoqlar</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/guldu.uz" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://t.me/s/gulduuz" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                        <a href="https://www.instagram.com/guldu_uz" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/c/guldu_uz" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <section class="section">
+    <div class="container">
+        <h2 class="section-title">Guliston davlat universitetining joylashuvi</h2>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d437660.8306999387!2d69.21441863656057!3d40.51676574609717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38b72aaf6e76a5ad%3A0xf6489a9c4646c23!2zR3VsaXN0b25kIERhdmxhIFVuaXZlcnNpdHk!5e0!3m2!1sen!2sus!4v1614143105265!5m2!1sen!2sus" width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+    </div>
+</section>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Guliston davlat universiteti. Barcha huquqlar himoyalangan.</p>
+            </div>
+        </div>
+
+    </footer>
+</body>
+</html>
